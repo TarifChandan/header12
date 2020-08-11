@@ -1,0 +1,43 @@
+/*
+    ======================
+    BURGER
+    ======================
+*/
+
+
+.burger {
+    // background-color: thistle
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.line {
+    width: 2rem;
+    height: 2px;
+    background-color: #2e2e2e;
+    transition: transform .2s;
+    
+
+    &:not(:last-child) {
+        margin-bottom: 8px;
+    }
+}
+
+.line--2 {
+    transform: translateX(-.6rem);
+}
+
+.cross-line--1 {
+    background-color: #a8a8a8;
+    transform: translateY(1rem) rotate(-45deg);
+}
+
+.cross-line--2 {
+    opacity: 0;
+}
+
+.cross-line--3 {
+    background-color: #a8a8a8;
+    transform: translateY(-1rem) rotate(45deg);
+}

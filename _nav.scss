@@ -1,0 +1,236 @@
+/*
+    ======================
+    NAV
+    ======================
+*/
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    height: 16vh;
+    // background-color: purple;
+    padding: 0 8vw;
+}
+
+/*
+    ======================
+    LOGO
+    ======================
+*/
+.logo-box {
+    // background-color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: .5rem;
+}
+
+.logo-before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+
+.logo-after {
+    position: absolute;
+    bottom: 0;
+    left: -150px;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+}
+
+// .logo-box::before {
+//     content: "";
+//     
+//     
+//     transition: left 1s;
+// }
+
+// .logo-box::after {
+//     content: "";
+
+//     transition: left 1s;
+// }
+
+.logo-box:hover .logo-after{
+    animation: goLeft .36s forwards .3s;
+}
+
+.logo-box:hover .logo-before {
+    animation: goRight .36s forwards;
+}
+
+.logo-before-effect {
+    animation: goRight .36s forwards;
+}
+
+.logo-after-effect {
+    
+    animation: goLeft .36s forwards .3s;
+}
+
+.logo-white {
+    background-color: #fff;
+}
+
+
+/*
+    ======================
+    NAVIGATION
+    ======================
+*/
+.navigation {
+    background-color: #181a1f;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    // display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+.navigation-appear {
+    opacity: 1;
+    visibility: visible;
+}
+
+.box {
+    padding-top: 10rem;
+    width: 30rem;
+}
+
+/*
+    ======================
+    MAIN LIST
+    ======================
+*/
+.main-list {
+    list-style: none;
+}
+
+.main-item {
+    padding: .7rem 0;
+}
+
+.main-link:link,
+.main-link:visited {
+    text-decoration: none;
+    font-size: 2.3rem;
+    color: #bebecc;
+    transition: color .1s;
+    position: relative;
+}
+
+.main-link::before {
+    content: "";
+    position: absolute;
+    top: 1.8rem;
+    left: -24rem;
+    width: 18rem;
+    height: 2px;
+    background: #9999a8;
+    transform: scaleX(0);
+    transform-origin: top left;
+    transition: transform .3s;
+}
+
+.main-link:hover::before {
+    transform: scaleX(1)
+}
+
+.main-link:hover,
+.main-link:active {
+    color: #9999a8;
+}
+
+
+
+/*
+    ======================
+    SUB LIST
+    ======================
+*/
+
+.sub-list {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.sub-item {
+    padding: .7rem 0;
+}
+
+.sub-link:link,
+.sub-link:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #9f9fb2;
+    transition: color .1s;
+}
+
+.sub-link:hover,
+.sub-link:active {
+    color: #ececec;
+}
+
+/*
+    ======================
+    SOCIAL
+    ======================
+*/
+.social {
+    margin-top: 4rem;
+} 
+
+
+.social-text {
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+    color: #e8e8f8;
+    width: 60%;
+    transition: all .1s;
+}
+
+.social-text:hover {
+    color: #9f9fb2;
+}
+
+.social-icon-box {
+    margin-top: 1.6rem;
+}
+
+.social-icon {
+    cursor: pointer;
+    height: 1.6rem;
+    width: 1.6rem;
+    fill: #b8b8cd;
+    transition: transform .2s;
+
+    &:not(:last-child) {
+        margin-right: 5rem;
+    }
+}
+
+.social-icon:hover {
+    transform: translateY(-.5rem);
+}
+
